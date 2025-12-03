@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f1f1;
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background: white; padding: 30px; border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 300px;
+        }
+        input {
+            width: 100%; padding: 10px; margin: 10px 0;
+        }
+        button {
+            width: 100%; padding: 10px; background: #333; color: white;
+            border: none; border-radius: 5px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Đăng nhập</h2>
+    <input id="user" type="text" placeholder="Tên đăng nhập">
+    <input id="pass" type="password" placeholder="Mật khẩu">
+    <button onclick="login()">Đăng nhập</button>
+    <p id="msg" style="color:red"></p>
+</div>
+
+<script>
+function login() {
+    const u = document.getElementById("user").value;
+    const p = document.getElementById("pass").value;
+
+    if (u === "admin" && p === "1234") {
+        window.location.href = "https://google.com";  // Trang sau khi login
+    } else {
+        document.getElementById("msg").innerText = "Sai thông tin đăng nhập!";
+    }
+}
+</script>
+
+</body>
+</html>
